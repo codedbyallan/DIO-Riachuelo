@@ -41,14 +41,14 @@ Repositório pessoal com **anotações, desafios, exercícios e projetos** desen
 
 ---
 
-## 🗂️ Estrutura
+## 📁 Estrutura
 
 DIO-Riachuelo/
-├── desafios/       → Desafios de código resolvidos
-├── exercicios/     → Exercícios práticos por módulo
-├── projetos/       → Projetos completos com aplicação de POO e BD
-├── README.md       → Documentação principal do bootcamp
-└── .gitignore      → Arquivos ignorados pelo Git
+├── desafios/ → Desafios de código resolvidos
+├── exercicios/ → Exercícios práticos por módulo
+├── projetos/ → Projetos completos com aplicação de POO e BD
+├── README.md → Documentação principal do bootcamp
+└── .gitignore → Arquivos ignorados pelo Git
 
 ---
 
