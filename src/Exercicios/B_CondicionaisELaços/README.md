@@ -16,6 +16,12 @@ Este módulo traz desafios de lógica com foco em `if/else`, `for`, `while` e en
 4. **Ex04 – Chakra (Naruto Theme)**
    - Recebe níveis de chakra de alunos e avalia se podem realizar o jutsu.
 
+
+> Os enunciados completos dos exercícios estão disponíveis no arquivo:
+
+- [02 – Estruturas de controle](./02-estruturas-controle.md)
+
+
 ---
 
 Cada exercício está implementado em seu próprio diretório com mensagens personalizadas no console.
