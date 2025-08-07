@@ -16,6 +16,12 @@ Este módulo contém exercícios introdutórios para praticar entrada de dados, 
 4. **Ex04 – Diferença de Idade**
    - Recebe dados de duas pessoas e mostra a diferença de idade.
 
+
+
+> Os enunciados completos dos exercícios estão disponíveis no arquivo:
+
+- [01 – Fundamentos da Linguagem](./01-fundamentos.md)
+
 ---
 
 Cada exercício está implementado em seu próprio diretório e pode ser executado diretamente pelo terminal ou IntelliJ.
