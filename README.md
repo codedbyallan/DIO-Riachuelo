@@ -1,6 +1,6 @@
 # 🧵 Bootcamp DIO - Riachuelo | Primeiros Passos com Java
 
-Repositório pessoal com **anotações, desafios, exercícios e projetos** desenvolvidos durante o bootcamp "Primeiros Passos com Java", promovido pela [DIO](https://www.dio.me/) em parceria com a Riachuelo.
+Repositório pessoal com **anotações, Desafios, exercícios e projetos** desenvolvidos durante o bootcamp "Primeiros Passos com Java", promovido pela [DIO](https://www.dio.me/) em parceria com a Riachuelo.
 
 > 🏆 Objetivo: dominar Java e boas práticas de desenvolvimento backend, com foco em POO, persistência com banco de dados, tratamento de exceções, versionamento e princípios SOLID.
 
@@ -45,7 +45,7 @@ Repositório pessoal com **anotações, desafios, exercícios e projetos** desen
 
 ```
 DIO-Riachuelo/
-├── desafios/      → Desafios de código resolvidos
+├── Desafios/      → Desafios de código resolvidos
 ├── exercicios/    → Exercícios práticos por módulo
 ├── projetos/      → Projetos completos com aplicação de POO e BD
 ├── README.md      → Documentação principal do bootcamp

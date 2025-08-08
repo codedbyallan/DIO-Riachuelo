@@ -1,6 +1,6 @@
 # 📘 Módulo B – Condicionais e Laços
 
-Este módulo traz desafios de lógica com foco em `if/else`, `for`, `while` e entrada de dados.
+Este módulo traz Desafios de lógica com foco em `if/else`, `for`, `while` e entrada de dados.
 
 ## 📂 Exercícios
 
