@@ -1,4 +1,4 @@
-package Exercicios.B_CondicionaisELaços.Exercicio01;
+package Exercicios.B_CondicionaisELacos.Exercicio01;
 
 import java.util.Scanner;
 

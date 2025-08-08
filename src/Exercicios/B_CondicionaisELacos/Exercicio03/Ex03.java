@@ -1,4 +1,4 @@
-package Exercicios.B_CondicionaisELaços.Exercicio03;
+package Exercicios.B_CondicionaisELacos.Exercicio03;
 
 import java.util.Locale;
 import java.util.Scanner;
