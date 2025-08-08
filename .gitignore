@@ -1,0 +1,11 @@
+# Arquivos compilados Java
+*.class
+
+# Configurações do IntelliJ
+.idea/
+*.iml
+
+# Saídas de build
+out/
+target/
+bin/
