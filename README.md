@@ -44,7 +44,7 @@ Repositório pessoal com **anotações, Desafios, exercícios e projetos** desen
 ## 📁 Estrutura
 
 ```
-DIO-Riachuelo/
+DIO-Riachuelo(bootcamp)/src
 ├── Desafios/      → Desafios de código resolvidos
 ├── exercicios/    → Exercícios práticos por módulo
 ├── projetos/      → Projetos completos com aplicação de POO e BD
