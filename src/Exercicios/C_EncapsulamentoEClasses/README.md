@@ -22,7 +22,7 @@ Este módulo contém exercícios focados em **programação orientada a objetos*
 
 > Os enunciados completos dos exercícios estão disponíveis no arquivo:
 
-- [03 – Objetos e Simulações](./03-classes-encapsulamento.md)
+- [03 – Objetos e Simulações](03-classes-encapsulamento.md)
 
 ---
 

@@ -26,5 +26,7 @@ public class Ex04 {
             contadorAluno++;
         }
         sc.close();
+
     }
+
 }
