@@ -9,6 +9,7 @@ public class Carro {
     private boolean ligado;
     private int marcha;
     private int velocidade;
+    public String marcaModelo = "NISSAN 370Z";
 
     public Carro() {
         this.ligado = false;
@@ -126,7 +127,7 @@ public class Carro {
     }
 
     public void status() {
-        System.out.printf("Ligado: %s | Marcha: %d | Velocidade: %d km/h%n",
+        System.out.printf("%nStatus:%nLigado: %s | Marcha: %d | Velocidade: %d km/h%n",
                 ligado ? "sim" : "não", marcha, velocidade);
     }
 
