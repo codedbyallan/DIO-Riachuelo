@@ -5,11 +5,13 @@ public class Carro {
     private static final int VEL_MIN = 0;
     private static final int MARCHA_MIN = 0;
     private static final int MARCHA_MAX = 6;
+    private static final int VIRAR_MIN = 1;
+    private static final int VIRAR_MAX = 40;
 
     private boolean ligado;
     private int marcha;
     private int velocidade;
-    public String marcaModelo = "NISSAN 370Z";
+    private final String marcaModelo = "NISSAN 370Z";
 
     public Carro() {
         this.ligado = false;
@@ -17,28 +19,35 @@ public class Carro {
         this.velocidade = 0;
     }
 
-    public void ligar() {
+    public String getMarcaModelo() {
+        return marcaModelo;
+    }
+
+
+    public boolean ligar() {
         if (this.ligado) {
             System.out.println("O carro já está ligado.");
-        } else {
-            this.ligado = true;
-            System.out.println("Carro ligado.");
+            return false;
         }
+        this.ligado = true;
+        System.out.println("Carro ligado.");
+        return true;
     }
 
-    public void desligar() {
+    public boolean desligar() {
         if (!this.ligado) {
-            System.out.println("O carro já está desligado");
-        } else {
-            if (marcha == MARCHA_MIN && velocidade == VEL_MIN) {
-                this.ligado = false;
-                System.out.println("Carro desligado.");
-            } else {
-                System.out.println("O carro precisa estar em ponto morto e velocidade 0 para ser desligado.");
-            }
+            System.out.println("O carro já está desligado.");
+            return false;
         }
-
+        if (marcha != MARCHA_MIN || velocidade != VEL_MIN) {
+            System.out.println("O carro precisa estar em ponto morto e velocidade 0 para ser desligado.");
+            return false;
+        }
+        this.ligado = false;
+        System.out.println("Carro desligado.");
+        return true;
     }
+
 
     public boolean acelerar() {
         if (!exigirLigado("acelerar")) {
@@ -76,6 +85,27 @@ public class Carro {
         return true;
     }
 
+    private String marchaPorExtenso(int marcha) {
+        switch (marcha) {
+            case 0:
+                return "ponto morto";
+            case 1:
+                return "primeira";
+            case 2:
+                return "segunda";
+            case 3:
+                return "terceira";
+            case 4:
+                return "quarta";
+            case 5:
+                return "quinta";
+            case 6:
+                return "sexta";
+            default:
+                return "desconhecida"; // segurança
+        }
+    }
+
     public boolean subirMarcha() {
         if (!exigirLigado("trocar marcha")) {
             return false;
@@ -85,7 +115,7 @@ public class Carro {
             return false;
         } else {
             marcha++;
-            System.out.println("Marcha atual: " + marcha + "ª.");
+            System.out.println("Marcha atual: " + marchaPorExtenso(marcha) + ".");
             return true;
         }
     }
@@ -95,11 +125,11 @@ public class Carro {
             return false;
         }
         if (marcha == MARCHA_MIN) {
-            System.out.println("Você está em ponto morto (0).");
+            System.out.println("Você já está em " + marchaPorExtenso(MARCHA_MIN) + " (0).");
             return false;
         } else {
             marcha--;
-            System.out.println("Marcha atual: " + marcha + "ª.");
+            System.out.println("Marcha atual: " + marchaPorExtenso(marcha) + ".");
             return true;
         }
     }
@@ -127,8 +157,8 @@ public class Carro {
     }
 
     public void status() {
-        System.out.printf("%nStatus:%nLigado: %s | Marcha: %d | Velocidade: %d km/h%n",
-                ligado ? "sim" : "não", marcha, velocidade);
+        System.out.printf("%nStatus:%nLigado: %s | Marcha: %s | Velocidade: %d km/h%n",
+                ligado ? "sim" : "não", marchaPorExtenso(marcha), velocidade);
     }
 
     private boolean faixaValida(int marcha, int velocidade) {
@@ -162,8 +192,9 @@ public class Carro {
     }
 
     private boolean podeVirar() {
-        if (velocidade < 1 || velocidade > 40) {
-            System.out.println("Só é possível virar entre 1 e 40 km/h (atual: " + velocidade + " km/h).");
+        if (velocidade < VIRAR_MIN || velocidade > VIRAR_MAX) {
+            System.out.println("Só é possível virar entre " + VIRAR_MIN + " e " + VIRAR_MAX +
+                    " km/h (atual: " + velocidade + " km/h).");
             return false;
         }
         return true;
