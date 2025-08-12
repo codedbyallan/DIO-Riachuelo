@@ -8,11 +8,11 @@ public class Main {
         Carro meucarro = new Carro();
         int opcao;
         System.out.println("\nO seu carro dos sonhos acaba de chegar da concessionária!\n" +
-                "O que você deseja fazer agora?\n\n" + meucarro.marcaModelo);
+                "O que você deseja fazer agora?\n\n" + meucarro.getMarcaModelo());
         meucarro.status();
 
         do {
-            System.out.println("\n=== " + meucarro.marcaModelo + " ===\n");
+            System.out.println("\n=== " + meucarro.getMarcaModelo() + " ===\n");
             System.out.println("1. [MOTOR] Ligar / Desligar");
             System.out.println("2. [ACELERAÇÃO] Acelerar / Frear");
             System.out.println("3. [TRANSMISSÃO] Subir / Descer Marcha");
@@ -27,49 +27,80 @@ public class Main {
                     System.out.println("Digite a opção:\n[1] - Ligar\n[2] - Desligar");
                     var opcao2 = sc.nextInt();
                     sc.nextLine();
+                    boolean ok;
                     if (opcao2 == 1) {
-                        meucarro.ligar();
+                        ok = meucarro.ligar();
+                    } else if (opcao2 == 2) {
+                        ok = meucarro.desligar();
                     } else {
-                        meucarro.desligar();
+                        System.out.println("Opção inválida.");
+                        break;
                     }
-                    meucarro.status();
+                    if (ok) {
+                        meucarro.status();
+                    }
                     break;
                 case 2:
                     System.out.println("Digite a opção:\n[1] - Acelerar\n[2] - Frear");
                     var opcao3 = sc.nextInt();
                     sc.nextLine();
+                    boolean ok2;
                     if (opcao3 == 1) {
-                        meucarro.acelerar();
+                        ok2 = meucarro.acelerar();
+                    } else if (opcao3 == 2) {
+                        ok2 = meucarro.reduzirVelocidade();
                     } else {
-                        meucarro.reduzirVelocidade();
+                        System.out.println("Opção inválida.");
+                        break;
                     }
-                    meucarro.status();
+                    if (ok2) {
+                        meucarro.status();
+                    }
                     break;
                 case 3:
                     System.out.println("Digite a opção:\n[1] - Subir Marcha\n[2] - Descer Marcha");
                     var opcao4 = sc.nextInt();
                     sc.nextLine();
+                    boolean ok3;
                     if (opcao4 == 1) {
-                        meucarro.subirMarcha();
+                        ok3 = meucarro.subirMarcha();
+                    } else if (opcao4 == 2) {
+                        ok3 = meucarro.descerMarcha();
                     } else {
-                        meucarro.descerMarcha();
+                        System.out.println("Opção inválida.");
+                        break;
                     }
-                    meucarro.status();
+                    if (ok3) {
+                        meucarro.status();
+                    }
                     break;
                 case 4:
                     System.out.println("Digite a opção:\n[1] - Virar Esquerda\n[2] - Virar Direita");
                     var opcao5 = sc.nextInt();
+                    boolean ok4;
                     sc.nextLine();
                     if (opcao5 == 1) {
-                        meucarro.virarEsquerda();
+                        ok4 = meucarro.virarEsquerda();
+                    } else if (opcao5 == 2) {
+                        ok4 = meucarro.virarDireita();
                     } else {
-                        meucarro.virarDireita();
+                        System.out.println("Opção inválida.");
+                        break;
                     }
-                    meucarro.status();
+                    if (ok4) {
+                        meucarro.status();
+                    }
                     break;
-
+                    case 5:
+                        System.out.println("Encerrando ...");
+                        break;
+                default:
+                    System.out.println("Opção inválida, tente novamente");
+                    break;
             }
+
         } while (opcao != 5);
+        sc.close();
     }
 }
 
