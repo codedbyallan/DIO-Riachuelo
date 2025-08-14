@@ -8,8 +8,11 @@ public class Main {
         MaquinaDeBanho maquina = new MaquinaDeBanho();
         int opcao;
         System.out.println("\n\n");
-        System.out.println("Bem-vindo. Esta é a XPET-5000XYZ. A Máquina perfeita para o banho do seu melhor amigo!" +
-                "\nEsse é o Status atual da máquina:\n");
+        System.out.println("""
+                Bem-vindo. Esta é a XPET-5000XYZ. A Máquina perfeita para o banho do seu melhor amigo!\
+
+                Esse é o Status atual da máquina:
+                """);
         maquina.status();
         System.out.println("--------------------\n\n");
         do {
@@ -56,27 +59,52 @@ public class Main {
                     maquina.status();
                     System.out.println();
                     break;
-                case 4:
-                    System.out.println("\nEscolha uma opção: \n1. Verificar níveis de água" +
-                            "\n2. Verificar níveis de shampoo \n3. Abastecer água \n4. Abastecer shampoo \n");
-                    var opcao3 = sc.nextInt();
-                    sc.nextLine();
+                case 4: {
+                    int opcao3;
+                    do {
+                        System.out.println(
+                                """
 
-                    if (opcao3 == 1) {
-                        maquina.mostrarNivelAgua();
-                    } else if (opcao3 == 2) {
-                        maquina.mostrarNivelShampoo();
-                    } else if (opcao3 == 3) {
-                        maquina.abastecerAgua();
-                    } else if (opcao3 == 4) {
-                        maquina.abastecerShampoo();
-                    } else {
-                        System.out.println("Opção de menu inválida, tente novamente");
-                        break;
-                    }
-                    maquina.status();
-                    System.out.println();
+                                        Escolha uma opção: \
+
+                                        1. Verificar níveis de água\
+
+                                        2. Verificar níveis de shampoo\
+
+                                        3. Abastecer água\
+
+                                        4. Abastecer shampoo\
+
+                                        5. Voltar"""
+                        );
+
+                        opcao3 = sc.nextInt();
+                        sc.nextLine();
+
+                        if (opcao3 == 1) {
+                            maquina.mostrarNivelAgua();
+                        } else if (opcao3 == 2) {
+                            maquina.mostrarNivelShampoo();
+                        } else if (opcao3 == 3) {
+                            maquina.abastecerAgua();
+                        } else if (opcao3 == 4) {
+                            maquina.abastecerShampoo();
+                        } else if (opcao3 == 5) {
+                            System.out.println("Voltando ao menu principal...");
+                        } else {
+                            System.out.println("Opção de menu inválida, tente novamente.");
+                            continue;
+                        }
+
+                        if (opcao3 != 5) {
+                            maquina.status();
+                            System.out.println();
+                        }
+
+                    } while (opcao3 != 5);
+
                     break;
+                }
                 case 5:
                     maquina.isMaquinaDisponivel();
                     System.out.println();
