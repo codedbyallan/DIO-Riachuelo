@@ -133,39 +133,39 @@ public class MaquinaDeBanho {
     // 5) Abastecer com água (2L por acionamento)
     public boolean abastecerAgua() {
         if (reservatorioAgua >= CAP_MAX_AGUA) {
-            System.out.println("O reservatório de água já está cheio.");
+            System.out.println("\nO reservatório de água já está cheio.\n");
             return false;
         }
         int falta = CAP_MAX_AGUA - reservatorioAgua;
         int incremento = Math.min(ABASTECIMENTO, falta);
         reservatorioAgua += incremento;
-        System.out.println("Água abastecida em " + incremento + "L. Nível atual: "
-                + reservatorioAgua + "/" + CAP_MAX_AGUA + "L.");
+        System.out.println("\nÁgua abastecida em " + incremento + "L. Nível atual: "
+                + reservatorioAgua + "/" + CAP_MAX_AGUA + "L.\n");
         return true;
     }
 
     // 6) Abastecer com shampoo (2L por acionamento)
     public boolean abastecerShampoo() {
         if (reservatorioShampoo >= CAP_MAX_SHAMPOO) {
-            System.out.println("O reservatório de shampoo já está cheio.");
+            System.out.println("\nO reservatório de shampoo já está cheio.\n");
             return false;
         }
         int falta = CAP_MAX_SHAMPOO - reservatorioShampoo;
         int incremento = Math.min(ABASTECIMENTO, falta);
         reservatorioShampoo += incremento;
-        System.out.println("Shampoo abastecido em " + incremento + "L. Nível atual: "
-                + reservatorioShampoo + "/" + CAP_MAX_SHAMPOO + "L.");
+        System.out.println("\nShampoo abastecido em " + incremento + "L. Nível atual: "
+                + reservatorioShampoo + "/" + CAP_MAX_SHAMPOO + "L.\n");
         return true;
     }
 
     // 7) Verificar nível de água
     public void mostrarNivelAgua() {
-        System.out.println("O nível de água atual é " + reservatorioAgua + "/" + CAP_MAX_AGUA + "L");
+        System.out.println("\nO nível de água atual é " + reservatorioAgua + "/" + CAP_MAX_AGUA + "L\n");
     }
 
     // 8) Verificar nível de shampoo
     public void mostrarNivelShampoo() {
-        System.out.println("O nível de shampoo atual é " + reservatorioShampoo + "/" + CAP_MAX_SHAMPOO + "L");
+        System.out.println("\nO nível de shampoo atual é " + reservatorioShampoo + "/" + CAP_MAX_SHAMPOO + "L\n");
     }
 
     public boolean verificarPet() {
