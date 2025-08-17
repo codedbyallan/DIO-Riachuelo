@@ -26,4 +26,4 @@ Este módulo contém exercícios focados em **programação orientada a objetos*
 
 ---
 
-Cada exercício possui um menu interativo e está implementado em seu próprio diretório, podendo ser executado diretamente via terminal ou IntelliJ.
+>Cada exercício possui um menu interativo e está implementado em seu próprio diretório, podendo ser executado diretamente via terminal ou IntelliJ.

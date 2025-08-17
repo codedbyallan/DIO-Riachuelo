@@ -24,4 +24,4 @@ Este módulo traz Desafios de lógica com foco em `if/else`, `for`, `while` e en
 
 ---
 
-Cada exercício está implementado em seu próprio diretório com mensagens personalizadas no console.
+> Cada exercício está implementado em seu próprio diretório com mensagens personalizadas no console.
