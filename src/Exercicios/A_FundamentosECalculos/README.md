@@ -24,4 +24,4 @@ Este módulo contém exercícios introdutórios para praticar entrada de dados, 
 
 ---
 
-Cada exercício está implementado em seu próprio diretório e pode ser executado diretamente pelo terminal ou IntelliJ.
+> Cada exercício está implementado em seu próprio diretório e pode ser executado diretamente pelo terminal ou IntelliJ.
