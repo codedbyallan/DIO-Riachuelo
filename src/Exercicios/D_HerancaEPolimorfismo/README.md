@@ -31,4 +31,4 @@ Este módulo reúne exercícios sobre **herança, polimorfismo e encapsulamento*
 ---
 
 
->Cada exercício possui um **menu interativo** e está implementado em seu próprio diretório, podendo ser executado diretamente **via terminal ou IntelliJ**.
+>Cada exercício pode ser executado diretamente **via terminal ou IntelliJ**.
